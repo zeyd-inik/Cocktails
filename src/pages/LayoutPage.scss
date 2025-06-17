@@ -1,0 +1,14 @@
+.LayoutPage {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+  .outlet_container {
+    background-color: #f9fafc;
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
