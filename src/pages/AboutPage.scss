@@ -1,15 +1,23 @@
+@import '../variables.scss';
+
 .AboutPage {
   padding-top: 3rem;
+  height: 100%;
+
+  display: flex;
+
   .wrapper {
-    max-width: 270px;
+    max-width: 80%;
     margin: 0 auto;
+
     h3 {
-      font-size: 24px;
-      font-weight: 700;
+      font-weight: 400;
       margin-bottom: 2rem;
     }
     p {
       line-height: 1.7;
+      font-weight: 400;
+      color: $custom_text_color;
     }
   }
 }

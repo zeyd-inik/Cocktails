@@ -1,3 +1,43 @@
-// custom colors
-
+// variables
 $custom_green: #12b882;
+
+$md_font_size: 18px;
+
+$custom_text_color: #8d9099;
+
+// media queries
+@mixin md {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+@mixin lg {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+@mixin xl {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+// font-size  -- clamp func.
+h1 {
+  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 1.0555555555555556rem + 2.2222222222222223vw, 3rem);
+}
+
+a {
+  font-size: 1rem;
+  font-size: clamp(1rem, 0.9111111111111111rem + 0.44444444444444453vw, 1.3rem);
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-size: clamp(
+    1.5rem,
+    1.2037037037037037rem + 1.4814814814814816vw,
+    2.5rem
+  );
+}
