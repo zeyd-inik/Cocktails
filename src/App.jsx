@@ -12,6 +12,10 @@ import AboutPage from './pages/AboutPage';
 import SingleCocktailPage from './pages/SingleCocktailPage';
 import Newsletter from './pages/Newsletter';
 
+//loaders
+import { loader as landingPageLoader } from './pages/LandingPage';
+import { loader as singleCocktailPageLoader } from './pages/SingleCocktailPage';
+
 //actions
 import { action as newsletterAction } from './pages/Newsletter';
 
@@ -24,6 +28,7 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <LandingPage />,
+        loader: landingPageLoader,
       },
       {
         path: 'about',
@@ -37,6 +42,7 @@ const router = createBrowserRouter([
       {
         path: 'cocktail/:id',
         element: <SingleCocktailPage />,
+        loader: singleCocktailPageLoader,
       },
     ],
   },
@@ -50,7 +56,6 @@ function App() {
         position="top-right"
         autoClose={3000}
       />
-      ;
     </>
   );
 }

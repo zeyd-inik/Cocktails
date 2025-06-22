@@ -1,0 +1,21 @@
+@import '../variables.scss';
+
+.CocktailList {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 1rem;
+  @include lg {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include xl {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  max-width: 80%;
+  margin: 0 auto;
+  @include md {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}

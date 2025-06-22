@@ -1,0 +1,48 @@
+@import '../variables.scss';
+
+.SearchBar {
+  max-width: 80%;
+  margin: 0 auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+
+  .form_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto;
+    max-width: 600px;
+    background-color: white;
+    padding: 25px 60px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 6px;
+
+    input {
+      border: 1px solid rgb(220, 211, 211);
+      border-right: none;
+      padding: 5px 12px;
+      border-radius: 4px 0 0 4px;
+      background-color: #f9fafc;
+      @include md {
+        width: 60%;
+      }
+    }
+    button {
+      border: 1px solid rgb(220, 211, 211);
+      border-left: none;
+      border-radius: 0 3px 3px 0;
+      padding: 5px 12px;
+      background-color: $custom_green;
+      color: white;
+      letter-spacing: 1px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: 0.5s all ease-in-out;
+
+      &:hover {
+        background-color: #057e56;
+      }
+    }
+  }
+}
