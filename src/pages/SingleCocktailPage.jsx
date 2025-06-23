@@ -39,36 +39,38 @@ function SingleCocktailPage() {
       <div className="wrapper">
         <Link to={'/'}>Back Home</Link>
         <h3>{name}</h3>
-        <img
-          src={photo}
-          alt=""
-        />
-        <div className="info">
-          <div>
-            <span>Name : </span>
-            {name}
-          </div>
-          <div>
-            <span>Category : </span>
-            {category}
-          </div>
-          <div>
-            <span>Info : </span>
-            {type}
-          </div>
-          <div>
-            <span>Glass : </span>
-            {glass}
-          </div>
-          <div>
-            <span>Ingredients : </span>
-            {ingredients.map((ingredient) => {
-              return drink[ingredient] + ', ';
-            })}
-          </div>
-          <div>
-            <span>Instructions : </span>
-            {instructions}
+        <div className="flex_container">
+          <img
+            src={photo}
+            alt=""
+          />
+          <div className="info">
+            <div>
+              <span>Name : </span>
+              {name}
+            </div>
+            <div>
+              <span>Category : </span>
+              {category}
+            </div>
+            <div>
+              <span>Info : </span>
+              {type}
+            </div>
+            <div>
+              <span>Glass : </span>
+              {glass}
+            </div>
+            <div>
+              <span>Ingredients : </span>
+              {ingredients.map((ingredient) => {
+                return drink[ingredient] + ', ';
+              })}
+            </div>
+            <div>
+              <span>Instructions : </span>
+              {instructions}
+            </div>
           </div>
         </div>
       </div>

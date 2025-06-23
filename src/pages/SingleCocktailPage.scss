@@ -3,6 +3,10 @@
 .SingleCocktailPage {
   width: 100%;
   padding-top: 2rem;
+  @include md {
+    min-height: 125vh;
+  }
+
   .wrapper {
     display: flex;
     flex-direction: column;
@@ -11,7 +15,6 @@
 
     max-width: 80vw;
     margin: 0 auto;
-
     h3 {
       font-weight: 400;
     }
@@ -23,27 +26,43 @@
       padding: 5px 12px;
       border-radius: 4px;
     }
-    img {
-      display: block;
-      max-width: 100%;
-      border-radius: 6px;
-    }
-    .info {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      gap: 0.4rem;
-
-      span {
-        background-color: #6ee8b8;
-        color: #00775a;
-        padding: 5px 5px;
-        border-radius: 4px;
-        margin-right: 8px;
+    .flex_container {
+      @include lg {
+        display: flex;
+        gap: 2rem;
       }
-      div {
-        margin-bottom: 0.4rem;
-        line-height: 1.7;
+      img {
+        display: block;
+        max-width: 100%;
+        border-radius: 6px;
+        @include lg {
+          width: 40%;
+        }
+      }
+      .info {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.4rem;
+        padding: 2rem 0;
+        @include md {
+          max-width: 700px;
+        }
+        @include lg {
+          padding: 0;
+        }
+
+        span {
+          background-color: #6ee8b8;
+          color: #00775a;
+          padding: 5px 5px;
+          border-radius: 4px;
+          margin-right: 8px;
+        }
+        div {
+          margin-bottom: 0.4rem;
+          line-height: 1.7;
+        }
       }
     }
   }
